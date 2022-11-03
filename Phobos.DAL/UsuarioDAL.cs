@@ -74,7 +74,123 @@ namespace Phobos.DAL
         }
 
         //Update
+        public void Editar(UsuarioDTO objEdit)
+        {
+            try
+            {
+                Conectar();
+                cmd = new MySqlCommand("UPDATE Usuario SET Nome = @Nome,Email = @Email', Senha = @Senha,DataNascUsuario = @DataNascUsuario, UsuarioTp = @UsuarioTp WHERE Id = @Id",conn);
+                cmd.Parameters.AddWithValue("@Nome", objEdit.Nome);
+                cmd.Parameters.AddWithValue("@Email", objEdit.Email);
+                cmd.Parameters.AddWithValue("@Senha", objEdit.Senha);
+                cmd.Parameters.AddWithValue("@DataNascUsuario",objEdit.DataNascUsuario);
+                cmd.Parameters.AddWithValue("@UsuarioTp", objEdit.UsuarioTp);
+                cmd.Parameters.AddWithValue("@Id",objEdit.Id);
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
 
+                throw new Exception("Erro ao editar usuario !!" + ex.Message);
+            }
+            finally
+            {
+                Desconectar();
+            }
+        }
+
+        //Delete
+        public void Excluir(int objDel)
+        {
+            try
+            {
+                Conectar();
+                cmd = new MySqlCommand("DELETE FROM Usuario WHERE Id = @Id", conn);
+                cmd.Parameters.AddWithValue("@Id",objDel);
+                cmd.ExecuteNonQuery ();
+
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception("Erro ao eliminar registro !!"+ex.Message);
+            }
+            finally
+            {
+                Desconectar();
+            }
+
+        }
+
+
+
+        //Autenticar
+        public UsuarioAutenticaDTO Autenticar(string objNome, string objSenha)
+        {
+            try
+            {
+                Conectar();
+                cmd = new MySqlCommand("SELECT Nome, Senha, UsuarioTp FROM Usuario WHERE Nome =@Nome AND Senha = @Senha", conn);
+                cmd.Parameters.AddWithValue("@Nome", objNome);
+                cmd.Parameters.AddWithValue("@Senha", objSenha);
+                dr = cmd.ExecuteReader();
+                UsuarioAutenticaDTO obj = null;
+                if (dr.Read())
+                {
+                    obj = new UsuarioAutenticaDTO();
+                    obj.Nome = dr["Nome"].ToString();
+                    obj.Senha = dr["Senha"].ToString();
+                    obj.UsuarioTp = Convert.ToInt32(dr["UsuarioTp"]);
+
+                }
+                return obj;
+
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception("Usuário não cadastrado !!"+ex.Message);
+            }
+            finally
+            {
+                Desconectar();
+            }
+
+        }
+
+        //BuscarPorId
+        public UsuarioDTO BuscaPorId(int Id)
+        {
+            try
+            {
+                Conectar();
+                cmd = new MySqlCommand("SELECT * FROM Usuario WHERE Id = @Id", conn);
+                cmd.Parameters.AddWithValue("@Id", Id);
+                dr = cmd.ExecuteReader();
+                UsuarioDTO obj = null;
+                if (dr.Read())
+                {
+                    obj = new UsuarioDTO();
+                    obj.Id = Convert.ToInt32(dr["Id"]);
+                    obj.Nome = dr["Nome"].ToString();
+                    obj.Email = dr["Email"].ToString();
+                    obj.Senha = dr["Senha"].ToString();
+                    obj.DataNascUsuario = Convert.ToDateTime(dr["DataNascUsuario"]);
+                    obj.UsuarioTp = Convert.ToInt32(dr["UsuarioTp"]);
+                }
+                return obj;
+
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception("Erro ao buscar registro !!"+ex.Message);
+            }
+            finally 
+            {
+                Desconectar();
+            }
+        }
 
     }
 }
