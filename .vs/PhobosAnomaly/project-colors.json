@@ -1,0 +1,26 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "529e1cd9-3e0f-4ff6-b568-b4a47532b041": {
+      "ProjectGuid": "529e1cd9-3e0f-4ff6-b568-b4a47532b041",
+      "DisplayName": "Phobos.UI",
+      "ColorIndex": 0
+    },
+    "96785358-2e8e-4273-9dc7-c19d5cab0fed": {
+      "ProjectGuid": "96785358-2e8e-4273-9dc7-c19d5cab0fed",
+      "DisplayName": "Phobos.BLL",
+      "ColorIndex": 1
+    },
+    "420e553b-fb82-4780-91ae-cb18a3ca8eab": {
+      "ProjectGuid": "420e553b-fb82-4780-91ae-cb18a3ca8eab",
+      "DisplayName": "Phobos.DTO",
+      "ColorIndex": 2
+    },
+    "dc17782a-b3fc-4a7e-9ef9-48c6c1c8634e": {
+      "ProjectGuid": "dc17782a-b3fc-4a7e-9ef9-48c6c1c8634e",
+      "DisplayName": "Phobos.DAL",
+      "ColorIndex": 3
+    }
+  },
+  "NextColorIndex": 4
+}
