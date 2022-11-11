@@ -5,17 +5,94 @@
 <html>
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title></title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/media.css"/>
+    <!-- Boxicons CSS -->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'/>
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+    <link rel="shortcut icon" href="img/icon.png" type="image/x-icon"/>
+    <title>Enxame PhobosAnomaly</title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
+        <div class="container">
+            
+        <header>
+            <nav>
+                <div class="menu">
+                    <a href="#home" class="logo">
+                        <i class='bx bxs-invader'></i>
+                        <span>Phobos</span>
+                    </a>
+                    <ul class="navbar open">
+                        <a class="btnMenu"><i class='bx bx-menu'></i></a>
+                        <li><a href="Pages\ConsultaUser.aspx">Consulta User</a></li>
+                        <li><a href="#about">about</a></li>
+                        <li><a>specialties <i class='bx bx-chevron-down'></i></a>
+                            <ul class="sub">
+                                <li><a href="#emphasis">emphasis</a></li>
+                                <li><a href="#products">products</a></li>
+                                <li><a href="#services">services</a></li>
+                                <li><a href="#domain">domain</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#localization">localization</a></li>
+                        <li><a href="#contact">contact</a></li>
+                        <button><a href="login.aspx">login</a></button>
+                    </ul>
+                </div>
+            </nav>
+
+        </header>
+        <div id="ContentMasterUser">
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
 
             </asp:ContentPlaceHolder>
+</div>
+
         </div>
+         <!-- scripts -->
+    <script src="scripts/jquery-3.6.0.min.js"></script>
+    <!-- swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- script local -->
+    <script src="scripts/script.min.js"></script>
     </form>
+
+
+    
+ <!-- footer -->
+        <footer>
+            <div class="footerC">
+                <ul>
+                    <li><a href="index.aspx#home">home</a></li>
+                    <li><a href="index.aspx#about">about</a></li>
+                    <li><a href="index.aspx#emphasis">emphasis</a></li>
+                    <li><a href="index.aspx#products">products</a></li>
+                    <li><a href="index.aspx#services">services</a></li>
+                </ul>
+                <ul>
+                    <li><a href="index.aspx#domain">domain</a></li>
+                    <li><a href="index.aspx#localization">localization</a></li>
+                    <li><a href="index.aspx#contact">contact</a></li>
+                </ul>
+                <a href="index.aspx#home" class="logo">
+                    <i class='bx bxs-invader'></i>
+                    <span>Phobos</span>
+                </a>
+                <h5>&copy; Copyright all rights reserved 2012</h5>
+            </div>
+        </footer>
+
+
 </body>
 </html>

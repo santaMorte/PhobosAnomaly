@@ -80,3 +80,9 @@ C:\Users\wil.rrsilva\Desktop\PhobosAnomaly\Phobos.UI\bin\System.Buffers.xml
 C:\Users\wil.rrsilva\Desktop\PhobosAnomaly\Phobos.UI\bin\System.Memory.xml
 C:\Users\wil.rrsilva\Desktop\PhobosAnomaly\Phobos.UI\bin\System.Numerics.Vectors.xml
 C:\Users\wil.rrsilva\Desktop\PhobosAnomaly\Phobos.UI\bin\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\wil.rrsilva\Desktop\PhobosAnomaly\Phobos.UI\bin\Phobos.DAL.dll
+C:\Users\wil.rrsilva\Desktop\PhobosAnomaly\Phobos.UI\bin\MySql.Data.dll
+C:\Users\wil.rrsilva\Desktop\PhobosAnomaly\Phobos.UI\bin\ZstdNet.dll
+C:\Users\wil.rrsilva\Desktop\PhobosAnomaly\Phobos.UI\bin\Phobos.DAL.pdb
+C:\Users\wil.rrsilva\Desktop\PhobosAnomaly\Phobos.UI\bin\Phobos.DAL.dll.config
+C:\Users\wil.rrsilva\Desktop\PhobosAnomaly\Phobos.UI\bin\MySql.Data.xml
